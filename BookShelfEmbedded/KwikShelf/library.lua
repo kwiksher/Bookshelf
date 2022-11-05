@@ -2,7 +2,7 @@ system.activate("multitouch")
 
 local trialCnt    = 1 -- set 0 for production
 local kprint = function(a, b)
-    --print(a, b)
+    print(a, b)
 end
 
 -- Create library
@@ -53,9 +53,10 @@ startThisMug = function()
             package.loaded["vo.page0"..i.."VO"]               = myrequire(".vo.page0%sVO",i)
             package.loaded["components.page0"..i.."UI"]       = myrequire(".components.page0%sUI",i)
             package.loaded["views.page0"..i.."Scene"]         = myrequire(".views.page0%sScene",i)
+            print("views.page0"..i.."Scene")
         end
         package.loaded["mediators.ApplicationMediator"] = require("KwikShelf.mediators.ApplicationMediator")
-        package.loaded["model"] = require("KwikShelf.model")
+        package.loaded["model"] = require("Kwikshelf.model")
 
     end
     ---
@@ -156,6 +157,8 @@ Runtime:addEventListener("changeThisMug",
             package.loaded["commands.kwik.animationAction"] = nil
             package.loaded["commands.kwik.actionCommand"] = nil
             package.loaded["commands.kwik.languageAction"] = nil
+            package.loaded["commands.kwik.screenshotAction"] = nil
+
             -- store UI
             -- this has a reference to App.TOC or bookXX, so need to unload it
             package.loaded["components.store.UI"] = nil
