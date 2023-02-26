@@ -1669,7 +1669,7 @@ local function init(options)
             storeInitialized = true
         elseif targetStore=="google" then
             if (verboseDebugOutput) then print "Running on Android (Google Play)" end
-            store=require("plugin.google.iap.v3")
+            store=require("plugin.google.iap.billing.v2")
             store.init("google", storeTransactionCallback)
             storeAvailable = true
             --Init in Google IAP is asynchronous - record that the call has yet to complete

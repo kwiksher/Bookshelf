@@ -7,10 +7,10 @@ settings = {
 --        ["plugin.KwikShelf"] = {
 --            publisherId = "com.kwiksher",
 --        },
-    --Google in app billing v3
-        ["plugin.google.iap.v3"] = {
+    --Google in app billing v2  https://forums.solar2d.com/t/new-warning-google-play-billing/354976/64
+        ["plugin.google.iap.billing.v2"] = {
             -- required
-            publisherId = "com.coronalabs",
+            publisherId = "com.solar2d",
             supportedPlatforms = { android = true },
         },
         --Amazon IAP
